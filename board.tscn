@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf775vj5yhyuu"]
+
+[ext_resource type="Script" path="res://board.gd" id="1_17ll1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c3hun"]
+albedo_color = Color(0.60902, 0.488156, 0.561352, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_eo15a"]
+material = SubResource("StandardMaterial3D_c3hun")
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_17ll1")
+
+[node name="Board" type="MeshInstance3D" parent="."]
+transform = Transform3D(20, 0, 0, 0, 2, 0, 0, 0, 20, 0, 0, 0)
+mesh = SubResource("BoxMesh_eo15a")

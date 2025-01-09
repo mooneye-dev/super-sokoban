@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://phft056facsd"]
+
+[ext_resource type="Script" path="res://basic_piece.gd" id="1_uw125"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5niwj"]
+albedo_color = Color(0.271893, 0.540975, 3.65794e-06, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_by7vl"]
+material = SubResource("StandardMaterial3D_5niwj")
+
+[node name="BasicPiece" type="Node3D"]
+script = ExtResource("1_uw125")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_by7vl")

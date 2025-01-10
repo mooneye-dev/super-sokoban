@@ -15,6 +15,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
+func valid_move(dx : int, dy : int) -> bool:
+	return grid.empty(self.x + dx, self.y + dy)
+	
 func reposition():
 	position.x = x
 	position.z = -y
@@ -23,17 +26,5 @@ func move(dx : int, dy : int):
 	grid.remove(self.x, self.y)
 	grid.put(self.x + dx, self.y + dy, self)
 	reposition()
-	
-func move_left():
-	move(-1, 0)
-	
-func move_right():
-	move(1, 0)
-	
-func move_up():
-	move(0, 1)
-	
-func move_down():
-	move(0, -1)
 	
 	

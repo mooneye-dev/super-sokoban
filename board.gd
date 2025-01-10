@@ -22,11 +22,16 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("move_left"):
-		player_piece.move_left()
+		player_piece.move(-1, 0)
 	if Input.is_action_just_pressed("move_right"):
-		player_piece.move_right()
+		player_piece.move(1, 0)
 	if Input.is_action_just_pressed("move_up"):
-		player_piece.move_up()
+		player_piece.move(0, 1)
 	if Input.is_action_just_pressed("move_down"):
-		player_piece.move_down()
+		player_piece.move(0, -1)
+	if Input.is_key_pressed(KEY_P):
+		grid.print()
+	if Input.is_key_pressed(KEY_ESCAPE):
+		get_tree().quit(0)
 	pass
+	

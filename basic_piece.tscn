@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" path="res://basic_piece.gd" id="1_uw125"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5niwj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ugta0"]
 albedo_color = Color(0.271893, 0.540975, 3.65794e-06, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_by7vl"]
-material = SubResource("StandardMaterial3D_5niwj")
+material = SubResource("StandardMaterial3D_ugta0")
 
 [node name="BasicPiece" type="Node3D"]
 script = ExtResource("1_uw125")
